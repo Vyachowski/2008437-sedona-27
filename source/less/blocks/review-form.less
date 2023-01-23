@@ -112,17 +112,22 @@
   }
 
   &--textarea {
-    margin-top: -8px;
+    @media (min-width: @tablet-width) {
+      margin-top: -8px; //FIXME – Проверить на планшете!
+    }
   }
 }
 //Стили заголовков групп полей
 .review-form__title {
   box-sizing: border-box;
   width: 100%;
-  padding-top: 24px; /* FIXME – Проверить необходимость в мобильной версии */
   margin-bottom: -4px;
   text-align: center;
   .subtitle();
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 24px; /* FIXME – Проверить необходимость в мобильной версии */
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 1px;
@@ -131,19 +136,25 @@
   }
 
   &--name {
-    padding-left: 42px;
+    @media (min-width: @tablet-width) {
+      padding-left: 42px;
+    }
   }
 
   &--contacts {
-    text-align: left;
-    margin-left: -20px;
-    white-space: nowrap;
+    @media (min-width: @tablet-width) {
+      text-align: left;
+      margin-left: -20px;
+      white-space: nowrap;
+    }
   }
 
   &--wide {
-    max-width: 400px;
-    padding-top: 1px;
-    margin-bottom: 28px;
+    @media (min-width: @tablet-width) {
+      max-width: 400px;
+      padding-top: 1px;
+      margin-bottom: 28px;
+    }
   }
 }
 // Стили подписей полей
