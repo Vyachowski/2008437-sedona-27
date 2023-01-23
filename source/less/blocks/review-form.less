@@ -1,3 +1,4 @@
+// Сетка блока
 .review-form__form {
   margin: 0 auto;
 
@@ -19,7 +20,7 @@
     row-gap: 56px;
   }
 }
-
+// Стили групп полей
 .review-form__fieldset {
   position: relative;
   display: grid;
@@ -114,15 +115,11 @@
     margin-top: -8px;
   }
 }
-
-.review-form__field-name {
-  padding-left: 16px;
-}
-
+//Стили заголовков групп полей
 .review-form__title {
   box-sizing: border-box;
   width: 100%;
-  padding-top: 24px;//Проверить FIXME
+  padding-top: 24px; /* FIXME – Проверить необходимость в мобильной версии */
   margin-bottom: -4px;
   text-align: center;
   .subtitle();
@@ -132,38 +129,28 @@
     font-size: 21px;
     margin-bottom: 27px;
   }
-}
 
-.review-form__title--name {
-  padding-left: 42px;
-}
-
-.review-form__title--contacts {
-  text-align: left;
-  margin-left: -20px;
-  white-space: nowrap;
-}
-
-.review-form__title--wide {
-  max-width: 400px;
-  padding-top: 1px;
-  margin-bottom: 28px;
-}
-
-.field-wrapper {
-  &--mail {
-    &::after {
-      background-image: url("../img/icons/other/mail.svg");
-    }
+  &--name {
+    padding-left: 42px;
   }
 
-  &--phone {
-    &::after {
-      background-image: url("../img/icons/other/phone.svg");
-    }
+  &--contacts {
+    text-align: left;
+    margin-left: -20px;
+    white-space: nowrap;
+  }
+
+  &--wide {
+    max-width: 400px;
+    padding-top: 1px;
+    margin-bottom: 28px;
   }
 }
-
+// Стили подписей полей
+.review-form__field-name {
+  padding-left: 16px;
+}
+// Стили поля выбора вариантов
 .review-form__selector {
   display: flex;
   justify-content: flex-start;
@@ -171,7 +158,7 @@
   flex-wrap: wrap;
   max-width: 280px;
 }
-
+// Стили радио кнопок и чекбоксов
 .review-form__radio,
 .review-form__checkbox {
   position: relative;
@@ -242,21 +229,12 @@
     }
   }
 }
-
+// Стили текста радио кнопок и чекбоксов
 .review-form__variant {
   .subtitle();
   text-transform: none;
 }
-
-.review-form__tip {
-  display: block;
-  text-align: right;
-
-  @media (max-width: @mobile-width-only) {
-    font-size: 12px;
-  }
-}
-
+// Стили текстового поля отзыва
 .review-form__textarea {
   box-sizing: border-box;
   min-height: 150px;
@@ -282,7 +260,7 @@
     height: 160px;
   }
 }
-
+// Стили обертки кнопки отправки формы
 .review-form__wrapper {
   grid-column: span 2;
 
@@ -303,7 +281,7 @@
     width: 768px;
   }
 }
-
+// Стили кнопки отправки формы
 .review-form__button {
   @media (max-width: @mobile-width-only) {
     margin-bottom: 3px;
@@ -315,5 +293,14 @@
 
   @media (min-width: @desktop-width) {
     width: 384px;
+  }
+}
+// Стили подсказки у кнопки отправки формы
+.review-form__tip {
+  display: block;
+  text-align: right;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 12px;
   }
 }
