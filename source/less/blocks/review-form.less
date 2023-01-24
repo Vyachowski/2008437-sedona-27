@@ -145,6 +145,7 @@
 }
 //Стили заголовков групп полей
 .review-form__title {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   margin-bottom: -4px;
@@ -204,6 +205,25 @@
     @media (min-width: @desktop-width) {
       padding-top: 0;
       margin-bottom: 45px;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 280px;
+        height: 1px;
+        background-color: @decorative-border-color;
+        content: "";
+      }
+
+      &::before {
+        left: -280px;
+      }
+
+      &::after {
+        right: -280px;
+      }
     }
   }
 
