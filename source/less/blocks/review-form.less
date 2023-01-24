@@ -16,6 +16,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
+    grid-template-columns: 494px 466px;
     max-width: 960px;
     row-gap: 56px;
   }
@@ -48,6 +49,11 @@
     row-gap: 16px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding: 0 60px 0 26px;
+    row-gap: 16px;
+  }
+
   &--contacts {
     @media (max-width: @mobile-width-only) {
       padding-bottom: 34px;
@@ -56,6 +62,24 @@
     @media (min-width: @tablet-width) {
       grid-template-rows: max-content max-content max-content;
       padding-left: 44px;
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-content: stretch;
+      padding-left: 64px;
+      padding-right: 0;
+    }
+  }
+
+  &--wide {
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      grid-column: span 2;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 17px;
+      grid-column: span 2;
     }
   }
 
@@ -71,8 +95,22 @@
     }
 
     @media (min-width: @desktop-width) {
+      justify-content: center;
       column-gap: 28px;
       grid-template-columns: 280px 280px 280px;
+    }
+  }
+
+  &--bordered {
+    @media (min-width: @tablet-width) {
+      padding: 0 43px 15px 60px;
+      border-right: 1px solid @field-darkest-color;
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-content: stretch;
+      padding: 0 63px 15px 0;
+      border-right: 1px solid @field-darkest-color;
     }
   }
 
@@ -90,30 +128,18 @@
     @media (min-width: @desktop-width) {
       column-gap: 64px;
       grid-template-columns: 173px 170px 153px 184px;
-    }
-  }
-
-  &--bordered {
-    @media (min-width: @tablet-width) {
-      padding: 0 43px 15px 60px;
-      border-right: 1px solid @field-darkest-color;
-    }
-  }
-
-  &--wide {
-    @media (min-width: @tablet-width) {
-      padding: 0;
-      grid-column: span 2;
-    }
-
-    @media (min-width: @desktop-width) {
-      grid-column: span 2;
+      padding-bottom: 40px;
     }
   }
 
   &--textarea {
     @media (min-width: @tablet-width) {
-      margin-top: -8px; //FIXME – Проверить на планшете!
+      margin-top: -8px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 0;
+      margin-bottom: -7px;
     }
   }
 }
@@ -135,9 +161,19 @@
     margin-bottom: 27px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    font-size: 21px;
+    margin-bottom: 27px;
+  }
+
   &--name {
     @media (min-width: @tablet-width) {
-      padding-left: 42px;
+      margin-left: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 31px;
     }
   }
 
@@ -147,6 +183,10 @@
       margin-left: -20px;
       white-space: nowrap;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 28px;
+    }
   }
 
   &--wide {
@@ -155,8 +195,31 @@
       padding-top: 1px;
       margin-bottom: 28px;
     }
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      margin-bottom: 29px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 0;
+      margin-bottom: 45px;
+    }
+  }
+
+  &--sightseings {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &--textarea {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 26px;
+    }
   }
 }
+
 // Стили подписей полей
 .review-form__field-name {
   padding-left: 16px;
@@ -195,6 +258,9 @@
 
 .review-form__radio {
   border-radius: 50%;
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
+  }
 }
 
 .review-form__checkbox {
@@ -318,5 +384,9 @@
 
   @media (max-width: @mobile-width-only) {
     font-size: 12px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
   }
 }
